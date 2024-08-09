@@ -1,0 +1,64 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@160..700&display=swap');
+
+:root {
+    /* ================================================================================================== */
+    --font-roboto: 'Roboto', sans-serif;
+    --font-ar:"Noto Naskh Arabic",serif;
+    --font-code: 'Consolas', "Courier New", Courier, 'Menlo', monospace;
+    
+}
+
+html {
+    font-family: 'Noto Naskh Arabic', serif, Arial, Tahoma, Helvetica, sans-serif;
+    /* font-family: 'Readex pro',sans-serif; */
+}
+
+.en {
+    /* 300 ,400 */
+    font-family: 'Roboto', sans-serif, en, Arial, Tahoma, sans-serif;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.fontcode {
+    font-family: 'Consolas', "Courier New", Courier, 'Menlo', monospace;
+}
+
+.mark,
+.mark1 {
+    font-family: var(--font-code);
+    font-family: Consolas, "Courier New", Courier, monospace !important;
+}
+
+/* =============== */
+
+.code-exam code {
+    font-family: var(--font-code);
+}
+
+.shift a {
+    font-weight: 500;
+}
+
+.shift a span.sym {
+    font-family: Arial, Tahoma, Helvetica, sans-serif !important;
+}
+
+.doc .doc-head>div {
+    font-family: 'Söhne', ui-sans-serif, system-ui, '-apple-system', "Segoe UI", 'Roboto', 'Ubuntu', 'Cantarell', 'Noto Sans', sans-serif, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.exam .code-exam pre {
+    font-family: 'Söhne Mono', 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+.code-exam pre::before {
+    font-family: monospace;
+    font-weight: 100;
+}

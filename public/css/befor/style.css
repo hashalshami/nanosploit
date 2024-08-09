@@ -1,0 +1,871 @@
+/* 2023/ 5/22 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.en {
+    vertical-align: middle;
+    white-space: nowrap;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+
+
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.in-bl {
+    line-height: inherit;
+}
+
+html {
+
+
+    /* ================================================================================================== */
+    --aside-w: 320px;
+    --headerHeight: 56px;
+    --scrollbar-h: 3px;
+    --headerHeight-primary: 59px;
+
+}
+
+html {
+    direction: rtl;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 18px;
+    line-height: 1.6;
+
+}
+
+
+link[rel="icon"] {
+    width: 16px;
+    height: 16px;
+}
+
+header {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    text-align: center;
+    height: var(--headerHeight-primary);
+    padding-top: var(--scrollbar-h);
+    border: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    font-size: 22px;
+    z-index: 99;
+}
+
+
+header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header .r-nav {
+    width: var(--headerHeight);
+    float: right;
+}
+
+header .l-nav {
+    width: auto;
+    padding: 12px 10px;
+    float: left;
+    text-align: center;
+}
+
+header nav {
+    text-align: center;
+    flex-grow: 4;
+}
+
+header .navbar {
+    display: inline-block;
+}
+
+header #scrollbar {
+    position: absolute;
+    border: 0 solid transparent;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: var(--scrollbar-h);
+    width: 100%;
+    z-index: 100;
+}
+
+header #bar {
+    height: inherit;
+    width: 0%;
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* padding: 13px; */
+    cursor: pointer;
+    height: var(--headerHeight);
+    width: var(--headerHeight) !important;
+    float: right;
+    /* color: inherit; */
+    transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+}
+
+#menu .menu-icon {
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    padding: 5px 3px;
+}
+
+#menu .menu-icon>div {
+    height: 3px;
+    border-radius: 15px;
+    /* box-sizing: content-box!important; */
+}
+
+#menu .menu-icon>div.bar {
+    margin: 4px 0;
+}
+
+/* 
+#menu.active {
+    background-color: var(--tab-hovered);
+} */
+
+/* ===================================== */
+
+
+nav .fa {
+    font-size: 1.10em;
+}
+
+/* ================== */
+nav ul li {
+    display: inline-block;
+    font-size: 1em;
+    width: calc(1.39 * var(--headerHeight));
+    height: var(--headerHeight);
+}
+
+header>nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: inherit;
+    height: inherit;
+    position: relative;
+    color: inherit;
+    text-align: center !important;
+    line-height: var(--headerHeight);
+    text-decoration: none;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+}
+
+header nav ul {
+    list-style: none !important;
+    font-size: inherit;
+    font-weight: inherit;
+    display: inline-flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+    width: inherit;
+}
+
+nav ul li.art {
+    margin-inline: 30px;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-radius: 2px;
+    transition: all;
+    transition-duration: 0.3s;
+}
+
+nav ul li a[href="#"]::before {
+    height: 1px;
+}
+
+nav ul li a:hover::before {
+    height: 2px !important;
+}
+
+
+
+
+
+/* =========================== */
+/* =========================== */
+
+/* ================ */
+
+.shift {
+    --shift-h: 40px;
+    height: 50px;
+    padding: 0 18px;
+    margin: var(--shift-h) 0;
+    display: block;
+}
+
+
+.shift a {
+    height: var(--shift-h);
+    padding: 6px 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    text-decoration: none;
+    font-size: 19px;
+    line-height: var(--shift-h);
+    border-radius: 4px;
+    text-align: center;
+    white-space: nowrap;
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+}
+
+.shift a span {
+    display: inline-block;
+    line-height: inherit;
+}
+
+.shift .previous-page {
+    float: right;
+}
+
+.shift .next-page {
+
+    float: left;
+}
+
+.shift .previous-page:hover .sym {
+    transform: translateX(3px);
+    -webkit-transform: translateX(3px);
+    -moz-transform: translateX(3px);
+    -ms-transform: translateX(3px);
+    -o-transform: translateX(3px);
+    -webkit-transform: translateX(3px);
+}
+
+.shift .next-page:hover .sym {
+    transform: translateX(-3px);
+    -webkit-transform: translateX(-3px);
+    -moz-transform: translateX(-3px);
+    -ms-transform: translateX(-3px);
+    -o-transform: translateX(-3px);
+    -webkit-transform: translateX(-3px);
+}
+
+.shift a span.sym {
+    vertical-align: middle;
+    font-size: 1.1em;
+    font-family: Arial, Tahoma, Helvetica, sans-serif !important;
+    transition: inherit;
+    -webkit-transition: inherit;
+    -moz-transition: inherit;
+    -ms-transition: inherit;
+    -o-transition: inherit;
+}
+
+.shift a:hover {
+    opacity: 1;
+    /* outline-style: solid; */
+    /* outline-color:  #0c416c; */
+    /* outline-width: 1px; */
+    /* outline-offset: 3px; */
+}
+
+/* ================= */
+
+main {
+    display: block;
+    padding: 10px 0;
+    transition: margin 0.5s ease;
+    -webkit-transition: margin 0.5s ease;
+    -moz-transition: margin 0.5s ease;
+    -ms-transition: margin 0.5s ease;
+    -o-transition: margin 0.5s ease;
+}
+
+#main .content>h1 {
+    text-align: center;
+    margin: 20px auto;
+}
+
+#main .content>h1 .term {
+    display: inline-block;
+}
+
+
+
+article {
+    display: block;
+    padding: 20px 0;
+    margin: 25px 20px;
+}
+
+article .section {
+    margin: 25px 10px;
+}
+
+aside {
+    position: fixed;
+    top: var(--headerHeight-primary) !important;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    border-left: 0;
+    z-index: 99;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+
+}
+
+aside button {
+    position: absolute;
+    left: 7px;
+    top: 10px;
+    border: none;
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+}
+
+aside button svg {
+    height: inherit;
+    width: inherit;
+    stroke-width: 1.5pt;
+    /* سمك الحدود */
+    stroke-miterlimit: 4;
+    stroke-linecap: square;
+    /* حواف الحدود */
+    stroke-linejoin: round;
+    stroke-dasharray: 400;
+}
+
+aside.active {
+    width: var(--aside-w);
+    /* border-left: var(--aside-border); */
+}
+
+aside ul {
+    list-style-type: none;
+}
+
+aside>div {
+    margin: 20px 0;
+
+}
+
+aside ul li a {
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    padding-right: 22px;
+}
+
+
+aside h2 {
+    padding-right: 14px;
+}
+
+
+aside .not-over {
+    text-align: center;
+    margin-top: 34px;
+}
+
+aside::-webkit-scrollbar {
+    /* height: 1rem; */
+    width: 5px;
+}
+
+aside::-webkit-scrollbar-thumb {
+    --thumb-radius: 0px;
+    border-radius: var(--thumb-radius);
+    -webkit-border-radius: var(--thumb-radius);
+    -moz-border-radius: var(--thumb-radius);
+    -ms-border-radius: var(--thumb-radius);
+    -o-border-radius: var(--thumb-radius);
+}
+
+aside::-webkit-scrollbar-track {
+    border: 0;
+}
+
+/* ============================================= */
+/* ============================================= */
+/* ============================================= */
+
+.mark,
+.mark1 {
+    vertical-align: middle;
+    display: inline-block;
+    direction: ltr;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+.mark {
+    /* height: 1.35em; */
+    /* line-height: 1.2; */
+    font-size: .92em;
+    padding: 0px 5px;
+
+}
+
+.mark1 {
+    height: 1.1em;
+    line-height: 1;
+    font-size: .9em;
+    box-sizing: content-box;
+    padding: 1px 5px;
+    margin: 0 2px;
+    border: 0;
+}
+
+/* ============================================= */
+/* ============================================= */
+/* ============================================= */
+
+/* الأمثلة */
+@media all {
+    :root {
+        --btn: #21262d;
+        --color-btn-text: #c9d1d9;
+        --color-border-btn: #f0f6fc1a;
+    }
+
+    .pattern {
+        margin: 60px 4px;
+    }
+
+    .pattern+.pattern {
+        margin-top: 75px;
+    }
+
+    .exam {
+        padding: 20px;
+        padding-bottom: 15px;
+        border-radius: 5px;
+        margin: 10px 0;
+    }
+
+    .exam .title-exam h3,
+    .exam .title-exam h4 {
+        font-size: 1.2em;
+    }
+
+
+    .exam .doc {
+        direction: ltr !important;
+        border-radius: 5px !important;
+        margin-top: 16px;
+    }
+
+    .doc .doc-head {
+        height: 32px;
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+        padding: 4px 16px;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .doc .doc-head>div {
+        font-family: 'Söhne', ui-sans-serif, system-ui, '-apple-system', "Segoe UI", 'Roboto', 'Ubuntu', 'Cantarell', 'Noto Sans', sans-serif, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        float: left !important;
+        letter-spacing: 1px;
+        line-height: 22px;
+        text-align: center;
+    }
+
+    .pattern .doc .doc-head button {
+        float: right !important;
+        cursor: pointer;
+        padding: 4px 0;
+    }
+
+    .doc-head button svg {
+        display: inline-block;
+        vertical-align: text-bottom;
+        margin-right: 3px;
+        height: 16px;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    /* ===== result Examle ===== */
+    .exam .result {
+        margin-top: 20px;
+    }
+
+    .exam div.result button {
+        font-size: 1.2em;
+        padding: 4px 10px;
+        margin-bottom: 5px;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .exam .result button i.none {
+        display: none !important;
+    }
+
+    .exam .result>div {
+        height: 0px;
+        margin: 0;
+        transition: all 0.4s ease;
+        -webkit-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -ms-transition: all 0.4s ease;
+        -o-transition: all 0.4s ease;
+    }
+
+    .exam .result>div iframe {
+        display: block;
+        width: 100%;
+        border-radius: 5px;
+        height: inherit;
+        border-width: 0px;
+        overflow-y: hidden;
+    }
+
+    .exam .result>div.view {
+        height: 100px;
+        margin-top: 16px;
+
+    }
+
+    .exam .result>div.view.lines8 {
+        height: 180px;
+    }
+
+    .exam .result>div.view.lines6 {
+        height: 160px;
+    }
+
+    .exam .result>div.view.lines15 {
+        height: 290px;
+    }
+
+    /* ==== code Example ==== */
+
+
+
+    .exam .code-exam {
+        padding: 12px 0;
+        direction: ltr;
+        width: 100%;
+        font-size: 17px;
+        border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+        line-height: 1.5;
+        overflow-x: auto;
+        counter-reset: line;
+        scroll-behavior: smooth;
+    }
+
+    .exam .code-exam pre {
+        display: block;
+        padding-left: 30px;
+        font-family: 'Söhne Mono', 'Andale Mono', 'Ubuntu Mono', monospace;
+        white-space: pre;
+        font-size: 16px;
+        position: relative;
+    }
+
+    .code-exam pre::before {
+        counter-increment: line;
+        content: counter(line);
+        position: absolute;
+        left: 6px;
+        font-weight: 100;
+        font-family: monospace;
+        display: inline-block;
+        width: 1em;
+        direction: rtl;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+    /* ================================================== */
+    /* ================================================== */
+
+    .info,
+    .notice {
+        margin: 80px 0 40px 0;
+        padding: 15px;
+    }
+
+    .info {
+        margin: 40px 0;
+        border-radius: 4px;
+    }
+
+    .notice {
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+    }
+
+    .article a.out-link {
+        display: inline-block;
+        text-decoration: none;
+        padding: 4px 12px;
+        margin: 28px 0;
+        border-radius: 5px;
+
+    }
+
+    .article a.out-link:hover {
+        transition-duration: 0.3s;
+    }
+
+    /* ==== */
+
+    .ul-mark li {
+        list-style-position: outside;
+        margin: 20px 10px;
+    }
+
+    .ul-mark li::marker {
+        font-size: medium;
+    }
+
+    /* ============== */
+
+}
+
+/* الشريط الجانبي الظاهر */
+@media screen and (min-width:1360px) {
+    html {
+        --aside-w: 300px;
+    }
+
+    #main {
+        margin-right: var(--aside-w);
+    }
+
+    #aside {
+        width: var(--aside-w);
+        border-left: var(--aside-border);
+    }
+
+    #main.active {
+        margin-right: 0px;
+    }
+
+    #aside.active {
+        width: 0px;
+        border: 0;
+    }
+
+    #menu {
+        background-color: var(--tab-hovered);
+    }
+
+    #menu.active {
+        background-color: transparent !important;
+    }
+}
+
+@media screen and (1101px<=width <=1359px) {
+    #main {
+        margin-right: 0;
+    }
+
+    #aside {
+        width: 0;
+    }
+
+    #main.active {
+        margin-right: var(--aside-w);
+    }
+
+    #aside.active {
+        width: var(--aside-w);
+        border-left: var(--aside-border);
+    }
+
+}
+
+@media screen and (max-width:1100px) {
+    #main.active {
+        margin-right: 0px;
+    }
+}
+
+@media screen and (320px <=width <=480px) {
+    #main>h1 {
+        font-size: 26px;
+    }
+
+    body {
+        font-size: 16px;
+        line-height: 1.7;
+        --headerHeight: 52px;
+        --headerHeight-primary: 55px;
+        --aside-w: 245px;
+    }
+
+    header {
+        font-size: 18px;
+
+    }
+
+    header nav ul {
+        justify-content: space-around;
+    }
+
+    nav ul li {
+        width: var(--headerHeight);
+    }
+
+    nav ul li.art {
+        margin: 0;
+    }
+
+    nav .fa {
+        font-size: 1.24em;
+    }
+
+    #menu svg {
+        height: 28px;
+    }
+
+    .navbar a.logo img {
+        height: 24px;
+    }
+
+    .mark1 {
+        box-sizing: border-box;
+    }
+
+    .container-tutorials {
+        justify-content: center;
+    }
+
+    .shift {
+        padding: 0 7px;
+        margin: 14px 0;
+    }
+
+    .shift a {
+        border-radius: 3px;
+    }
+
+    article h2 {
+        line-height: 40px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .pattern {
+        margin: 40px 2px;
+    }
+
+    .exam {
+        padding: 13px 11px;
+    }
+
+    .exam .title-exam h3,
+    .exam .title-exam h4 {
+        font-size: 16px;
+    }
+
+    .exam .doc {
+        margin-top: 10px;
+    }
+
+
+}
+
+@media screen and (481px <=width <=768px) {}
+
+@media screen and (769px <=width <=1024px) {}
+
+@media screen and (1025px <=width <=1200px) {}
+
+@media screen and (min-width:1201px) {}
+
+@media screen and (max-width:620px) {
+    ::-webkit-scrollbar {
+        height: 5px !important;
+        width: auto;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: transparent !important;
+        border-top: 0 !important;
+    }
+}
+
+/* =================================== */

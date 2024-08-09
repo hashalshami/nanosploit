@@ -1,0 +1,179 @@
+@media screen and (min-width:760px) {
+    .pattern {
+        margin: 60px 4px;
+    }
+
+    .exam {
+        padding: 20px;
+    }
+}
+
+.pattern {
+    margin: 60px 0px;
+}
+
+.pattern+.pattern {
+    margin-top: 75px;
+}
+
+.exam {
+    padding: 9px 10px;
+    margin: 10px 0;
+        border-radius: 5px;
+}
+
+.exam .title-exam h3,
+.exam .title-exam h4 {
+    font-size: 1.2em;
+}
+
+
+.exam .doc {
+    direction: ltr !important;
+    border-radius: 5px !important;
+    margin-top: 16px;
+}
+
+.doc .doc-head {
+    height: 32px;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    padding: 4px 16px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.doc .doc-head>code {
+    float: left !important;
+    letter-spacing: 1px;
+    line-height: 22px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.exam .doc .doc-head button {
+    float: right !important;
+    cursor: pointer;
+    padding: 4px 0;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+}
+
+.doc-head button svg {
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin-right: 3px;
+    height: 16px;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* ===== result Examle ===== */
+.exam .result {
+    margin-top: 20px;
+}
+
+.exam div.result button {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.2em;
+    padding: 4px 10px;
+    margin-bottom: 5px;
+    -o-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.exam .result button svg {
+    fill: #fff;
+    height: 1.0em;
+    margin: 4px;
+
+}
+
+.exam .result button.clicked svg {
+    transform: rotate(180deg);
+
+}
+
+.exam .result>div {
+    height: 0px;
+    margin: 0;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: height 0.4s ease;
+}
+
+
+.exam .result>div.view {
+    height: 120px;
+    /* min-height: 100px; */
+    /* max-height: 400px; */
+    margin-top: 16px;
+
+}
+.exam .result>div iframe {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    height: inherit;
+    border-width: 0px;
+    overflow-y: auto;
+}
+
+.exam .result>div.view.lines8 {
+    height: 180px;
+}
+
+.exam .result>div.view.lines6 {
+    height: 160px;
+}
+
+.exam .result>div.view.lines15 {
+    height: 300px;
+} 
+
+/* ==== code Example ==== */
+
+
+
+.exam .code-exam {
+    padding: 12px 0;
+    direction: ltr;
+    width: 100%;
+    font-size: 17px;
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+    line-height: 1.5;
+    overflow-x: auto;
+    counter-reset: line;
+    scroll-behavior: smooth;
+}
+
+.exam .code-exam pre {
+    display: block;
+    padding-left: 30px;
+    white-space: pre;
+    font-size: 16px;
+    position: relative;
+}
+
+.code-exam pre::before {
+    counter-increment: line;
+    content: counter(line);
+    position: absolute;
+    left: 6px;
+    display: inline-block;
+    width: 1em;
+    direction: rtl;
+    text-align: center;
+}

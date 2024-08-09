@@ -1,0 +1,168 @@
+header {
+    border: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
+    height: var(--headerHeight-primary);
+}
+
+header .header-content {
+    height: var(--headerHeight);
+    font-size: 18px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    justify-content: space-between;
+    text-align: center;
+}
+
+header #scrollbar {
+    border: 0 solid transparent;
+    height: var(--scrollbar-h);
+    width: 100%;
+    /* z-index: 100; */
+}
+
+.header-content .logo {
+    height: 30px;
+}
+
+header #bar {
+    height: inherit;
+    width: 0%;
+    -o-transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 11px;
+    cursor: pointer;
+    height: 100%;
+    float: right;
+    border: 0 solid transparent;
+    background-color: inherit;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+#menu .menu-icon {
+    margin: auto;
+    width: 26px;
+}
+
+#menu .menu-icon div {
+    height: 3px !important;
+    border-radius: 15px;
+    box-sizing: border-box !important;
+}
+
+#menu .menu-icon>div.bar {
+    margin-block: 4px;
+}
+
+#header .navbar.l a {
+    display: inline-flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+
+.header-content .navbar.c .fa {
+    font-size: 1.35em;
+}
+
+.header-content div.c {
+    flex-grow: 1;
+}
+
+/* ================== */
+
+header .navbar.c ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    column-gap: 7%;
+    height: 100%;
+    list-style: none !important;
+    width: inherit;
+    overflow-x: hidden;
+}
+
+header div.c ul li {
+    display: inline-block;
+    height: inherit;
+}
+
+header div.c li a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding: 0 15px;
+    width: 70px;
+    position: relative;
+    height: inherit;
+    color: inherit;
+    text-align: center !important;
+    line-height: var(--headerHeight);
+    text-decoration: none;
+    -o-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+header div.c li.home {
+    --color: #1e9bff;
+}
+
+header div.c li.art {
+    --color: #ff1867;
+}
+
+header div.c li.about {
+    --color: #00dc82;
+}
+
+header div.c li a::before {
+    background-color: var(--color);
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: inherit;
+    height: 0;
+    border-radius: 2px;
+    transition: all;
+    transition-duration: 0.3s;
+}
+
+header div.c li a[href="#"]::before {
+    height: 1px !important;
+}
+
+header div.c li a:hover::before {
+    height: 2px !important;
+}
+
+
+
+header div.c a:hover,
+#menu:hover {
+    background: var(--tab-hovered);
+}

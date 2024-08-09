@@ -1,0 +1,16 @@
+html {
+    /* ================================================================================================== */
+    --aside-w: 240px;
+    --headerHeight: 55px;
+    --scrollbar-h: 3px;
+    --headerHeight-primary: 58px;
+}
+
+@media screen and (min-width:1000px) {
+    html {
+            /* ================================================================================================== */
+            --aside-w: 320px;
+            --headerHeight: 57px;
+            --headerHeight-primary: 60px;
+        }
+}

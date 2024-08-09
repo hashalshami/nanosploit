@@ -1,0 +1,331 @@
+/* 2023/ 5/22 */
+@import url('./colors.css');
+@import url('./fonts.css');
+@import url('./sizes.css');
+@import url('./parts/htmlStyle.css');
+@import url('./parts/header.css');
+@import url('./parts/footer.css');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.en {
+    vertical-align: middle;
+    white-space: nowrap;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+
+.in-bl {
+    line-height: inherit;
+}
+
+html {
+    direction: rtl;
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    padding-top: var(--headerHeight-primary);
+    padding-bottom: 0 !important;
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.6;
+}
+#main{min-height: 100vh;}
+
+
+
+
+.shift {
+    --shift-h: 37px;
+    padding: 40px 18px;
+    display: block;
+}
+
+
+.shift a {
+    height: var(--shift-h);
+    padding: 0 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: var(--shift-h);
+    border-radius: 4px;
+    text-align: center;
+    white-space: nowrap;
+    -o-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.shift a span {
+    display: inline-block;
+    line-height: inherit;
+}
+
+.shift .previous-page {
+    float: right;
+}
+
+.shift .next-page {
+
+    float: left;
+}
+
+.shift .previous-page:hover .sym {
+    -webkit-transform: translateX(3px);
+    -webkit-transform: translateX(3px);
+    -moz-transform: translateX(3px);
+    -ms-transform: translateX(3px);
+    -o-transform: translateX(3px);
+    transform: translateX(3px);
+}
+
+.shift .next-page:hover .sym {
+    -webkit-transform: translateX(-3px);
+    -webkit-transform: translateX(-3px);
+    -moz-transform: translateX(-3px);
+    -ms-transform: translateX(-3px);
+    -o-transform: translateX(-3px);
+    transform: translateX(-3px);
+}
+
+.shift a span.sym {
+    vertical-align: middle;
+    font-size: 18px;
+    -o-transition: inherit;
+    -webkit-transition: inherit;
+    -moz-transition: inherit;
+    -ms-transition: inherit;
+    transition: inherit;
+}
+
+/* ================= */
+
+main {
+    display: block;
+    -o-transition: margin 0.5s ease;
+    -webkit-transition: margin 0.5s ease;
+    -moz-transition: margin 0.5s ease;
+    -ms-transition: margin 0.5s ease;
+    transition: margin 0.5s ease;
+}
+
+#main .content>h1 {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 26px;
+}
+
+#main .content>h1 .term {
+    display: inline-block;
+}
+
+
+
+.article {
+    display: block;
+    padding: 20px 0;
+    margin: 25px 20px;
+}
+
+.article .section {
+    margin-block: 20px;
+    margin-inline: 10px;
+}
+
+aside {
+    position: fixed;
+    top: var(--headerHeight-primary) !important;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    border-left: 0;
+    z-index: 99;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -o-transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+}
+
+aside .close-btn{
+    position: absolute;
+    left: 7px;
+    top: 10px;
+    border: none;
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+}
+
+aside .close-btn svg {
+    height: inherit;
+    width: inherit;
+    stroke-width: 1.5pt;
+    stroke-miterlimit: 4;
+    stroke-linecap: square;
+    stroke-linejoin: round;
+    stroke-dasharray: 400;
+}
+
+aside.active {
+    width: var(--aside-w);
+    /* border-left: var(--aside-border); */
+}
+
+aside ul {
+    list-style-type: none;
+}
+
+aside>div {
+    margin: 20px 0;
+
+}
+
+aside ul li a {
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+    padding-right: 22px;
+}
+
+
+aside h2 {
+    padding-right: 14px;
+}
+
+
+aside .not-over {
+    display: inline-block;
+    max-width: 90% ;
+    text-align: center;
+    margin-top: 34px;
+}
+
+aside::-webkit-scrollbar {
+    /* height: 1rem; */
+    width: 5px;
+}
+
+aside::-webkit-scrollbar-thumb {
+    --thumb-radius: 0px;
+    -o-border-radius: var(--thumb-radius);
+    -webkit-border-radius: var(--thumb-radius);
+    -moz-border-radius: var(--thumb-radius);
+    -ms-border-radius: var(--thumb-radius);
+    border-radius: var(--thumb-radius);
+}
+
+aside::-webkit-scrollbar-track {
+    border: 0;
+}
+
+/* ============================================= */
+/* ============================================= */
+/* ============================================= */
+
+.mark,
+.mark1 {
+    vertical-align: middle;
+    display: inline-block;
+    direction: ltr;
+    text-align: center;
+    white-space: nowrap;
+    -o-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px;
+    font-size: .92em;
+    line-height: 1.2;
+    margin: 0 2px;
+}
+
+.mark {
+    /* height: 1.35em; */
+    padding: 0px 5px;
+
+}
+
+.mark1 {
+    padding: 1px 5px;
+    border: 0;
+}
+
+/* ============================================= */
+/* ============================================= */
+/* ============================================= */
+
+
+
+
+
+
+/* ================================================== */
+/* ================================================== */
+
+.info,
+.notice {
+    margin: 80px 0 40px 0;
+    padding: 15px;
+}
+
+.info {
+    margin: 40px 0;
+    border-radius: 4px;
+}
+
+.notice {
+    -o-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+}
+
+.article a.out-link {
+    display: inline-block;
+    text-decoration: none;
+    padding: 4px 12px;
+    margin: 28px 0;
+    border-radius: 5px;
+
+}
+
+.article a.out-link:hover {
+    transition-duration: 0.3s;
+}
+
+/* ==== */
+
+.ul-mark li {
+    list-style-position: outside;
+    margin: 20px 10px;
+}
+
+.ul-mark li::marker {
+    font-size: medium;
+}
+
+/* ============== */

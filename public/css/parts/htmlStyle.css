@@ -1,0 +1,40 @@
+.mark-primary {
+    display: inline-block;
+    background-color: #21262d;
+    color: #c9d1d9;
+    border: 1px solid #f0f6fc1a;
+    border-radius: 3px;
+    padding: 0 5px 3px 5px;
+    line-height: 1;
+    font-family: Consolas, "Courier New", Courier, monospace;
+    white-space: nowrap;
+    direction: ltr;
+}
+
+.mark00 {
+    display: inline-block;
+    color: #ffffffe0;
+    border-radius: 3px;
+    padding: 0 5px 1px;
+    line-height: 1;
+    margin: 0 2px;
+    font-family: Consolas, "Courier New", Courier, monospace !important;
+    white-space: nowrap;
+    direction: ltr;
+    background-color: #033c685e;
+    background-color: #21262d;
+    border: none;
+}
+
+
+.exam div.result a {
+    display: inline-block;
+    background-color: #0f755c;
+    color: #ededed;
+    font-size: 1.2em;
+    padding: 4px 10px;
+    margin-bottom: 5px;
+    border-radius: 4px;
+
+    cursor: pointer;
+}
