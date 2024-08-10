@@ -1,18 +1,17 @@
-<header x-data="{ open: false }"
-    class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 sticky top-0 right-0 left-0">
+<header class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 sticky top-0 right-0 left-0">
     <!-- Primary Navigation Menu -->
     <div class=" max-w-7xl mx-auto px-4 flex justify-between h-16">
         <div class="flex">
             <!-- Hamburger -->
-            <div class="-ms-2 flex items-center ">
-                <button @click="open = ! open"
+            <div class="-ms-2 flex items-center " @click="sidebar = !sidebar">
+                <button
                     class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 focus:text-gray-500 dark:focus:text-gray-400 transition duration-150 ease-in-out">
                     <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
-                        <path :class="{ 'hidden': open, 'inline-flex': !open }" class="inline-flex"
+                        <path :class="{ 'hidden': sidebar, 'inline-flex': !sidebar }" class="inline-flex"
                             stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="M4 6h16M4 12h16M4 18h16" />
-                        <path :class="{ 'hidden': !open, 'inline-flex': open }" class="hidden" stroke-linecap="round"
-                            stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        <path :class="{ 'hidden': !sidebar, 'inline-flex': sidebar }" class="hidden"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                     </svg>
                 </button>
             </div>
@@ -32,22 +31,7 @@
                             fill-rule="evenodd" clip-rule="evenodd"></path>
                     </svg>
                 </button>
-            </div>
-
-            <!-- Navigation Links -->
-            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                <x-app.nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                    {{ __('Dashboard') }}
-                </x-app.nav-link>
-            </div>
-        </div>
-        <div class="flex items-stretch justify-between grow">
-
-        </div>
-        <div class="flex"></div>
-        <!-- Settings Dropdown -->
-        <div class="flex items-center justify-center ">
-            @guest
+                 @guest
                 <div class="flex gap-x-2">
                     @if (Route::has('register'))
                         <div class=" inline-flex font-serif">
@@ -55,7 +39,7 @@
                                 class="inline-flex items-center border border-gray-700 px-3 py-1  leading-6 text-sm shadow rounded-md text-white font-semibold bg-slate-800 transition ease-in-out duration-150 cursor-pointer ring-1 ring-slate-900/10 ">
                                 <span>إشتراك </span>
                             </a>
-                           
+
                         </div>
                     @endif
                     <div class="relative inline-flex font-serif">
@@ -104,6 +88,23 @@
                     </x-slot>
                 </x-app.dropdown>
             @endguest
+            </div>
+           
+            <!-- Navigation Links -->
+
+        </div>
+        <div class="flex items-stretch justify-between grow">
+
+        </div>
+        <div class="flex"></div>
+        <!-- Settings Dropdown -->
+        <div class="flex items-center justify-center ">
+
+            <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                <x-app.nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    {{ __('Dashboard') }}
+                </x-app.nav-link>
+            </div>
             <div class="mr-2 flex items-center">
                 <a href="{{ route('home') }}">
                     <x-app.application-logo class="block h-9 w-auto fill-current text-gray-800 dark:text-gray-200" />

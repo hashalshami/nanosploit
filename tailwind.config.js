@@ -26,5 +26,9 @@ module.exports = {
         },
     },
 
-    plugins: [forms, typography],
+    plugins: [
+        forms, 
+        typography,
+        // require('flowbite/plugin'),
+    ],
 };

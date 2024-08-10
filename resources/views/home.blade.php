@@ -8,15 +8,17 @@
             التطورات، لضمان تزويدكم بكافة الموارد اللازمة لتعزيز مسيرتكم الأكاديمية والمهنية.
         </p>
     </div>
+
     <div class="flex justify-evenly px-3 items-start ">
-        <x-card.tutorial name="HTML" img="img/HTML.webp" href="/hash">
+        <x-card.tutorial name="HTML" img="img/HTML.webp" :href="route('html.overview')">
             سنتعرف في هذهِ الدورة على أساسيات
             <span class="en">HTML</span> وعلى طريقة استخدامها في إنشاء صفحات
             الويب.
         </x-card.tutorial>
 
         <x-card.tutorial name="CSS" img="img/CSS.webp" :soon="true" />
+    </div>
 
-       
+
 
 </x-app-layout>
