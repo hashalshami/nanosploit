@@ -16,6 +16,17 @@
 
 ```CMD
 git clone https://github.com/hashemSoft/nanosploit.git
+cd nanosploit
+```
+
+### 2. إعداد البيئة
+
+```CMD
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+php artisan serve
 ```
 
 ## About Laravel
