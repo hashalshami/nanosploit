@@ -1,5 +1,6 @@
 @props([
     'title' => 'nanosploit',
+    'menu' => true,
 ])
 
 <!DOCTYPE html>
@@ -20,6 +21,12 @@
             document.documentElement.classList.remove('dark')
         }
     </script>
+
+    <style>
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
     <link rel="icon" type="image/x-icon" href="{{ asset('img/logo.png') }}" style="width: 16px; height: 16px">
 
     <!-- Fonts -->
@@ -35,19 +42,51 @@
     @livewireStyles
 </head>
 
-<body class="font-ar antialiased" x-data="{ sidebar: false }">
-    <div class="min-h-screen w-full bg-gray-100 dark:bg-dark-body">
-        {{-- @include('layouts.navigation') --}}
-        <x-layout.header />
+<body class="font-ar antialiased">
+    <div class="min-h-screen w-full bg-gray-100  dark:bg-dark-body" x-data="{ sidebar:  window.innerWidth >= 1000  }" 
+        x-init="
+    window.addEventListener('resize', () => {
+        sidebar = window.innerWidth >= 1000;
+    });">
+        <x-layout.header :menu="$menu" />
 
-        <!-- Page Heading -->
-
+        <!-- drawer component -->
 
         <!-- Page Content -->
-        <main>
+        <main
+            @if ($menu) :class="{ 'md:mr-64': sidebar, 'md:mr-0': !sidebar }"
+            x-transition:enter="transition transform ease-in-out duration-300" x-transition:enter-start="translate-x-full"
+            x-transition:enter-end="-translate-x-0" x-transition:leave="transition transform ease-in-out duration-300"
+            x-transition:leave-start="-translate-x-0" x-transition:leave-end="translate-x-full"
+            class="transition-[margin] ease-in-out duration-300 " @endif>
             {{ $slot }}
+
         </main>
+
+        @if ($menu)
+            <aside x-cloak x-show="sidebar" @keydown.escape.window="sidebar = false"
+                x-transition:enter="transition transform ease-in-out duration-300"
+                x-transition:enter-start="translate-x-full" x-transition:enter-end="-translate-x-0"
+                x-transition:leave="transition transform ease-in-out duration-300"
+                x-transition:leave-start="-translate-x-0" x-transition:leave-end="translate-x-full"
+                class="fixed border-t dark:border-gray-700 top-16 right-0 z-40 w-64 overflow-y-scroll min-h-screen p-4  bg-white dark:bg-gray-900">
+
+                <h5 class="text-base font-semibold text-gray-500 uppercase dark:text-gray-400"></h5>
+                <button @click="sidebar = false"
+                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 absolute top-2.5 left-2.5 dark:hover:bg-gray-600 dark:hover:text-white">
+                    <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd"
+                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                {{ $sidebar }}
+            </aside>
+        @endif
     </div>
+
+    @stack('moduls')
     @livewireScripts
 </body>
 <script src="{{ asset('js/main.js') }}"></script>

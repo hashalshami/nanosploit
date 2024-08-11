@@ -1,5 +1,4 @@
-<x-app-layout>
-
+<x-app-layout :menu="false">
     <div
         class="text-center p-5  leading-4 rounded-md text-gray-500 dark:text-gray-400  hover:text-gray-700 dark:hover:text-gray-300 focus:outline-none transition ease-in-out duration-150">
         <h1 class="font-bold text-3xl">موقع كود برو</h1>

@@ -1,15 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HtmlTutorialController;
 
 Route::get('/', function () {
     return view('home');
 })->name('home');
 
 
-Route::get('/tutorials/html/overview', function () {
-    return view('tutorials.html.basic.overview');
-})->name('html.overview');
+Route::controller(HtmlTutorialController::class)->group(function () {
+    Route::get('/tutorials/html/overview', 'index')->name('html.overview');
+});
 
 
 

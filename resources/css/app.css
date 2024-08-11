@@ -1,10 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* [x-cloak] { display: none !important; } */
 
+@layer base {
+    .en {
+        @apply font-sans align-middle whitespace-nowrap;
+    }
 
-@layer base{
-    .en{
-        @apply font-sans;
+    aside::-webkit-scrollbar {
+        @apply w-1;
+    }
+    aside::-webkit-scrollbar-thumb {
+        @apply bg-blue-500 rounded;
+    }
+    aside::-webkit-scrollbar-track {
+        @apply bg-gray-300;
     }
 }

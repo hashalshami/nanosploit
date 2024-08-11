@@ -1,4 +1,4 @@
-<x-app-layout>
+<x-app-layout :menu="false">
     
 
     <div class="py-12">
