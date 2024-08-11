@@ -6,6 +6,17 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
+# كيفية تشغيل مشروع Nanosploit
+
+لتشغيل هذا المشروع، اتبع الخطوات التالية:
+
+### 1. استنساخ المستودع
+
+استنسخ المستودع إلى جهازك باستخدام الأمر التالي:
+
+```CMD
+git clone https://github.com/hashemSoft/nanosploit.git
+
 
 ## About Laravel
 
