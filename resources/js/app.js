@@ -1,11 +1,12 @@
-import './bootstrap';
+// import './bootstrap';
 import Alpine from 'alpinejs';
 // import 'flowbite';
+
 // Alpine.store('sidebar', {
-//     on: false,
+//     open: false,
 
 //     toggle() {
-//         this.on = !this.on
+//         this.open = !this.open
 //     }
 // })
 window.Alpine = Alpine;

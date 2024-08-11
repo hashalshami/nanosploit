@@ -8,7 +8,7 @@
         </p>
     </div>
 
-    <div class="flex justify-evenly px-3 items-start ">
+    <div class="flex flex-wrap items-center justify-center sm:justify-evenly px-3 ">
         <x-card.tutorial name="HTML" img="img/HTML.webp" :href="route('html.overview')">
             سنتعرف في هذهِ الدورة على أساسيات
             <span class="en">HTML</span> وعلى طريقة استخدامها في إنشاء صفحات

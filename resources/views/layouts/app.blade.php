@@ -1,8 +1,3 @@
-@props([
-    'title' => 'nanosploit',
-    'menu' => true,
-])
-
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" dir="rtl">
 
@@ -22,11 +17,7 @@
         }
     </script>
 
-    <style>
-        [x-cloak] {
-            display: none !important;
-        }
-    </style>
+    
     <link rel="icon" type="image/x-icon" href="{{ asset('img/logo.png') }}" style="width: 16px; height: 16px">
 
     <!-- Fonts -->
@@ -38,12 +29,12 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
+    
     @livewireStyles
 </head>
 
-<body class="font-ar antialiased">
-    <div class="min-h-screen w-full bg-gray-100  dark:bg-dark-body" x-data="{ sidebar:  window.innerWidth >= 1000  }" 
+<body class="font-ar antialiased bg-gray-100  dark:bg-dark-body">
+    <div class="min-h-screen w-full " x-data="{ sidebar:  window.innerWidth >= 1000  }" 
         x-init="
     window.addEventListener('resize', () => {
         sidebar = window.innerWidth >= 1000;
@@ -55,9 +46,6 @@
         <!-- Page Content -->
         <main
             @if ($menu) :class="{ 'md:mr-64': sidebar, 'md:mr-0': !sidebar }"
-            x-transition:enter="transition transform ease-in-out duration-300" x-transition:enter-start="translate-x-full"
-            x-transition:enter-end="-translate-x-0" x-transition:leave="transition transform ease-in-out duration-300"
-            x-transition:leave-start="-translate-x-0" x-transition:leave-end="translate-x-full"
             class="transition-[margin] ease-in-out duration-300 " @endif>
             {{ $slot }}
 
@@ -81,13 +69,16 @@
                             clip-rule="evenodd"></path>
                     </svg>
                 </button>
-                {{ $sidebar }}
+                @isset($sidebar)
+                    {{ $sidebar }}
+                @endisset
             </aside>
         @endif
     </div>
 
-    @stack('moduls')
+    
     @livewireScripts
+    {{-- @livewireScriptConfig --}}
 </body>
 <script src="{{ asset('js/main.js') }}"></script>
 
