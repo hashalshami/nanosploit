@@ -3,7 +3,7 @@
         <x-html.sidebar />
      </x-slot>
 
-    <x-layout.shift />
+    <x-main.shift />
    
 
 
