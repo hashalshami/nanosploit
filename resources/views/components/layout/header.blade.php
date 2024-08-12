@@ -1,5 +1,5 @@
 @props(['menu'=>true])
-<header class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 sticky top-0 right-0 left-0">
+<header class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 sticky top-0 right-0 left-0 w-full">
     <!-- Primary Navigation Menu -->
     <div class=" max-w-7xl mx-auto px-4 flex justify-between h-16">
         <div class="flex">
