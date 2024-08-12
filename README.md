@@ -7,7 +7,11 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+<<<<<<< HEAD
 ## كيفية تشغيل المشروع 
+=======
+## كيفية تشغيل مشروع 
+>>>>>>> 24cb1d52ce07e64c250721113147f09cfdc38dd6
 
 لتشغيل هذا المشروع، اتبع الخطوات التالية:
 
