@@ -33,7 +33,7 @@
     @livewireStyles
 </head>
 
-<body class="font-ar antialiased bg-gray-100  dark:bg-dark-body">
+<body class="font-ar antialiased dark:bg-dark-body bg-gray-200/80 ">
     <div class="min-h-screen w-full " x-data="{ sidebar:  window.innerWidth >= 1000  }" 
         x-init="
     window.addEventListener('resize', () => {

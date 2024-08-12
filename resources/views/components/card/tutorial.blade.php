@@ -28,7 +28,5 @@ $classes = ($soon ?? true)
          </p>
 
 
-
-
      </a>
  </div>

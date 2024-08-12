@@ -1,7 +1,7 @@
 @props(['menu'=>true])
 <div class="h-16"></div>
 <header 
-class="h-16 w-full bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 fixed top-0 right-0 left-0 ">
+class="h-16 z-50 w-full bg-slate-800 dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 fixed top-0 right-0 left-0 ">
     <!-- Primary Navigation Menu -->
     <div class="px-2 flex justify-between h-full ">
         <div class="flex">

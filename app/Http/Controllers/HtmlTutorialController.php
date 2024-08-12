@@ -12,5 +12,17 @@ class HtmlTutorialController extends Controller
         return view('tutorials.html.intro.overview');
     }
 
+    public function element()
+    {
+
+        return view('tutorials.html.basic.element');
+    }
+
+    public function structure()
+    {
+
+        return view('tutorials.html.basic.structure');
+    }
+
 
 }
