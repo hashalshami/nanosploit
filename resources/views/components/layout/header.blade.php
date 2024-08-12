@@ -1,7 +1,9 @@
 @props(['menu'=>true])
-<header class="bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 sticky top-0 right-0 left-0 w-full">
+<div class="h-16"></div>
+<header 
+class="h-16 w-full bg-white dark:bg-gray-800 border-b border-gray-100 dark:border-gray-700 fixed top-0 right-0 left-0 ">
     <!-- Primary Navigation Menu -->
-    <div class=" max-w-7xl mx-auto px-4 flex justify-between h-16">
+    <div class="px-2 flex justify-between h-full ">
         <div class="flex">
             <!-- Hamburger -->
             <div class="ms-2 flex items-center w-11" >
@@ -47,31 +49,22 @@
                   <x-icons.home class="w-6 dark:fill-gray-300 inline-block mx-2 " />
                 </x-app.nav-link>
 
-                <div class=" space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                <x-app.nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+               <div class="hidden">
+                 <x-app.nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                     {{ __('Dashboard') }}
                 </x-app.nav-link>
-            </div>
+               </div>
         </div>
-        <!-- Settings Dropdown -->
         <div class="flex items-center justify-center ">
 
            
              @guest
-                    <div class="flex gap-x-2">
-                        @if (Route::has('register'))
-                            <div class=" inline-flex font-serif">
-                                <a href="{{ route('register') }}" wire:navigate
-                                    class="inline-flex items-center border border-gray-700 px-3 py-1  leading-6 text-sm shadow rounded-md text-white font-semibold bg-slate-800 transition ease-in-out duration-150 cursor-pointer ring-1 ring-slate-900/10 ">
-                                    <span>إشتراك </span>
-                                </a>
-
-                            </div>
-                        @endif
+                    <div class="flex items-center">
+                       
                         <div class="relative inline-flex font-serif">
                             <a href="{{ route('login') }}" wire:navigate
                                 class="inline-flex items-center px-3 py-1 border border-gray-700 leading-6 text-sm shadow rounded-md text-white font-semibold bg-slate-800 transition ease-in-out duration-150 cursor-pointer ring-1 ring-slate-900/10 ">
-                                <span>تسجيل الدخول</span>
+                                <span> دخول</span>
                             </a>
                             <span class="flex absolute h-3 w-3 top-0 right-0 -mt-1 -mr-1">
                                 <span

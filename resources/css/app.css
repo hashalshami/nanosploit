@@ -5,7 +5,7 @@
 
 @layer base {
     .en {
-        @apply font-sans align-middle whitespace-nowrap;
+        @apply font-sans align-middle ;
     }
 
     aside::-webkit-scrollbar {
@@ -16,5 +16,11 @@
     }
     aside::-webkit-scrollbar-track {
         @apply bg-gray-300;
+    }
+}
+
+@layer components{
+    .middle{
+        @apply flex items-center justify-center;
     }
 }

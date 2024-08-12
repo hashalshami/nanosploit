@@ -7,6 +7,7 @@
             التطورات، لضمان تزويدكم بكافة الموارد اللازمة لتعزيز مسيرتكم الأكاديمية والمهنية.
         </p>
     </div>
+    <div class="h-10 bg-slate-400 mx:bg-white"></div>
 
     <div class="flex flex-wrap items-center justify-center sm:justify-evenly px-3 ">
         <x-card.tutorial name="HTML" img="img/HTML.webp" :href="route('html.overview')">

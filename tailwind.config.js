@@ -17,6 +17,10 @@ module.exports = {
                     body: '#090c10',
                 },
             },
+            screens: {
+                'mx': { 'max': '640px' },
+                // => @media (max-width: 640px) { ... }
+            },
            
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
