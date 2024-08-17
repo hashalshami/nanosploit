@@ -660,7 +660,7 @@ aside .not-over{
 
 aside::-webkit-scrollbar {
     /* height: 1rem; */
-    width: var(--scrollbar-h);
+    width: 3px;
 }
 aside::-webkit-scrollbar-thumb {
     background-color: rgba(217,217,227,.8);

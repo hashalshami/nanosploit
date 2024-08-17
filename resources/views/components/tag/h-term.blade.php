@@ -1,3 +1,3 @@
-<span class="dark:text-teal-700 font-sans align-middle">
+<span class="dark:text-tag-termh font-sans">
     {{$slot}}
 </span>

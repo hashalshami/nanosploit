@@ -11,30 +11,32 @@
     <div class="flex flex-wrap items-center justify-center sm:justify-evenly px-3 ">
 
         <div
-            class=" opacity-90 w-[210px] bg-gradient-to-b from-gray-600 to-gray-800 rounded-[15px_0_15px_0] my-5  transition-all duration-500 shadow-[0_0_8px_2px_black] text-white">
+            class=" opacity-90 hover:opacity-100 w-[240px] bg-gradient-to-b from-gray-600 to-gray-800 rounded-[15px_0_15px_0] my-5  transition-all duration-500 shadow-[0_0_8px_2px_black] text-white">
             <a href="{{ route('html.overview') }}">
                 <h2
-                    class="font-sans text-center bg-[#19c5c540] rounded-tl-[15px] rounded-tr-[0] rounded-br-[0] rounded-bl-[0] py-1 tracking-widest font-roboto font-bold text-[20px]">
+                    class="en text-center bg-[#19c5c540] rounded-tl-[15px] rounded-tr-[0] rounded-br-[0] rounded-bl-[0] py-1 tracking-widest font-roboto font-bold text-[20px]">
                     HTML</h2>
                 <img src="{{ asset('img/HTML.webp') }}" alt="HTML" class="w-full" />
-                <p
-                    class="h-28 mt-1 px-2 py-1 text-center rounded-br-[15px] border-t bg-[rgba(67,141,141,0.162)]  font-normal leading-[25px]   border-gray-400   text-[16px] 
+                <div
+                    class="h-28 flex items-center justify-center mt-1 px-2 py-1 text-center rounded-br-[15px] border-t bg-[rgba(67,141,141,0.162)]  font-normal leading-[25px]   border-gray-400   text-[16px] 
          ">
 
-                    سنتعرف في هذهِ الدورة على أساسيات
+                    <p>
+                        سنتعرف في هذهِ الدورة على أساسيات
                     <span class="en">HTML</span> وعلى طريقة استخدامها في إنشاء صفحات
                     الويب.
-                </p>
+                    </p>
+                </div>
 
 
             </a>
         </div>
 
         <div
-            class=" opacity-90 w-[210px] bg-gradient-to-b from-gray-600 to-gray-800 rounded-[15px_0_15px_0] my-5  transition-all duration-500 shadow-[0_0_8px_2px_black] text-white">
+            class=" opacity-90 w-[240px] bg-gradient-to-b from-gray-600 to-gray-800 rounded-[15px_0_15px_0] my-5  transition-all duration-500 shadow-[0_0_8px_2px_black] text-white">
             <a href="#">
                 <h2
-                    class="font-sans text-center bg-[#19c5c540] rounded-tl-[15px] rounded-tr-[0] rounded-br-[0] rounded-bl-[0] py-1 tracking-widest font-roboto font-bold text-[20px]">
+                    class="en text-center bg-[#19c5c540] rounded-tl-[15px] rounded-tr-[0] rounded-br-[0] rounded-bl-[0] py-1 tracking-widest font-roboto font-bold text-[20px]">
                     CSS</h2>
                 <img src="{{ asset('img/CSS.webp') }}" alt="CSS" class="w-full" />
                 <p

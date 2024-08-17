@@ -15,17 +15,24 @@ module.exports = {
             colors: {
                 dark: {
                     body: '#090c10',
+                    text: {
+                        main: '#cbcbcb',
+                    },
                 },
+                tag:{
+                    orange:'#f9b960',
+                    termh:'#4e898c',
+                }
             },
             screens: {
-                'mx': { 'max': '640px' },
-                // => @media (max-width: 640px) { ... }
+                'mx': { 'max': '640px' }, // => @media (max-width: 640px) { ... }
             },
            
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-                ar: ['"Noto Naskh Arabic"', 'serif'],
-
+                ar: ['"Noto Naskh Arabic"', ...defaultTheme.fontFamily.serif],
+                display: ['Cairo', 'sans-serif'],
+                en: ['Roboto', 'sans-serif', 'Arial', 'Tahoma'],
             },
         },
     },

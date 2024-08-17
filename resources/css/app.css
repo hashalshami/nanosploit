@@ -1,26 +1,28 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-[x-cloak] { display: none !important; }
+[x-cloak] {
+    display: none !important;
+}
 
 @layer base {
-    .en {
-        @apply font-sans align-middle ;
+    html{
+    @apply font-ar sm:text-lg ;
     }
-
+    .en {
+        @apply font-en align-middle;
+    }
+    .term{
+        @apply text-white font-en;
+    }
+    
     aside::-webkit-scrollbar {
         @apply w-1;
     }
     aside::-webkit-scrollbar-thumb {
-        @apply bg-blue-500 rounded;
+        @apply bg-slate-300;
     }
     aside::-webkit-scrollbar-track {
-        @apply bg-gray-300;
-    }
-}
-
-@layer components{
-    .middle{
-        @apply flex items-center justify-center;
+       @apply bg-gray-400 bg-opacity-30;
     }
 }
