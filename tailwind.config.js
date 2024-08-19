@@ -15,12 +15,13 @@ module.exports = {
             colors: {
                 dark: {
                     body: '#090c10',
+                    aside: '#15202b',
                     text: {
                         main: '#cbcbcb',
                     },
                 },
                 tag:{
-                    orange:'#f9b960',
+                    orange:'#ce984e',
                     termh:'#4e898c',
                 }
             },
@@ -29,10 +30,11 @@ module.exports = {
             },
            
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-                ar: ['"Noto Naskh Arabic"', ...defaultTheme.fontFamily.serif],
-                display: ['Cairo', 'sans-serif'],
-                en: ['Roboto', 'sans-serif', 'Arial', 'Tahoma'],
+                sans: ['Rubik', ...defaultTheme.fontFamily.sans],
+                ar: ['Tajawal', ...defaultTheme.fontFamily.sans],
+                en: ['Rubik', ...defaultTheme.fontFamily.sans],
+                display: ['"Readex Pro"', 'sans-serif'],
+                // en: ['Roboto', ...defaultTheme.fontFamily.sans],
             },
         },
     },

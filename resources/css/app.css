@@ -6,12 +6,10 @@
 }
 
 @layer base {
-    html{
+    /* html{
     @apply font-ar sm:text-lg ;
-    }
-    .en {
-        @apply font-en align-middle;
-    }
+    } */
+   
     .term{
         @apply text-white font-en;
     }

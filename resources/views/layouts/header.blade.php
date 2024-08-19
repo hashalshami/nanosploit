@@ -7,7 +7,7 @@ class="h-16 z-50 w-full bg-slate-800 dark:bg-gray-800 border-b border-gray-100 d
             <!-- Hamburger -->
             <div class="ms-2 flex items-center w-11" >
                @if($menu)
-                 <button @click="sidebar = !sidebar"
+                 <button @click="sidebar = !sidebar" :class="{ 'dark:bg-gray-900': sidebar,  }"
                     class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 dark:text-gray-200 hover:text-gray-500 dark:hover:text-gray-100 hover:bg-gray-100 dark:hover:bg-gray-900 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-900 focus:text-gray-500 dark:focus:text-gray-100 transition duration-150 ease-in-out">
                     <svg class="h-7 w-7" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                         <path :class="{ 'hidden': sidebar, 'inline-flex': !sidebar }" class="inline-flex"
