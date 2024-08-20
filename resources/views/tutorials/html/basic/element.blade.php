@@ -1,10 +1,9 @@
 <x-app-layout title=" العناصر في لغة HTML ">
     <x-shift />
-    <x-h1>
-       <x-slot name="term">HTML </x-slot>
+    <h1>
+       <code class="term-lesson">HTML </code>
         العناصر في لغة HTML 
-    </x-h1>
-     <h1>الوسوم في لغة <code class="en term">HTML</code></h1>
+    </h1>
     <p style="display: none">
         تتكون كل صفحة من صفحات <code style="font-family: inherit">HTML</code> من
         مجموعة من العناصر
@@ -33,7 +32,7 @@
             بحيث ان كل وسم يقوم بغرض معين سواء كان لعرض روابط او جداول او صور ...
             و غيرها من المهام التي سوف نتعلمها في الدروس القادمة بإذن الله.
         </p>
-        <x-notice>
+        <x-alert.info>
             لغة <code class="en">HTML</code> غير حساسة لحالة الأحرف بمعنى إذا كانت حالة الأحرف كبيرة أو
             صغيرة فلا يوجد فرق بينهما. <br />
             كمثال سواء قمت بكتابة
@@ -45,7 +44,7 @@
                 &lt;<span class="tagname">HTML</span>&gt;
             </code>
             فالنتيجة هي نفسها تماما.
-        </x-notice>
+        </x-alert.info>
         <p>
             <b>نصيحة </b> &colon; دائماً وابداً قم بكتابة عناصر
             <code class="en" translate="no">HTML</code> باللغة الإنجليزية بحالتها

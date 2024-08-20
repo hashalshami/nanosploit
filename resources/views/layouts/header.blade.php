@@ -47,7 +47,9 @@ class="h-16 z-50 w-full bg-slate-800 dark:bg-gray-800 border-b border-gray-100 d
                 <x-app.nav-link :href="route('home')" :active="request()->routeIs('home')">
                   <x-icons.home class="w-6 dark:fill-gray-300 inline-block mx-2 " />
                 </x-app.nav-link>
-
+                 <x-app.nav-link :href="route('home')" :active="request()->routeIs('home')">
+                  حول
+                </x-app.nav-link>
                <div class="hidden">
                  <x-app.nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                     {{ __('Dashboard') }}

@@ -1,21 +1,20 @@
 <x-app-layout title=" العناصر في لغة HTML ">
     <x-shift />
-    <x-h1>
-       <x-slot name="term">HTML </x-slot>
-       <br>
+    <h1>
+       <code class="term-lesson">HTML </code>
         هيكل الصفحة في <span class="font-en">HTML</span>
-    </x-h1>
+    </h1>
      
-    <x-article >
-        <x-h2>هيكل الصفحة</x-h2>
+    <article >
+        <h2>هيكل الصفحة</h2>
         <p>
             يعتبر هيكل الصفحة أحد العناصر الأساسية في تطوير صفحات الويب. <br>
             يساعد هيكل الصفحة على ترتيب وتنظيم المحتوى الموجود في صفحة الويب, ويعد أمر هام لضمان توافق الموقع مع معايير
             الويب وتحسين محركات البحث.
         </p>
-    </x-article>
-    <x-article >
-        <x-h2>العناصر الأساسية لهيكل الصفحة </x-h2>
+    </article>
+    <article >
+        <h2>العناصر الأساسية لهيكل الصفحة </h2>
         <p>
             فيما يلي بعض العناصر الأساسية في هيكل الصفحة &colon;
         </p>
@@ -118,10 +117,10 @@
             </ul>
 
         </div>
-    </x-article>
+    </article>
 
 
-    <x-article >
+    <article >
         <h2>الشكل العام لهيكل الصفحة</h2>
         <p>الشكل التالي هو تصور توضيحي للهيكل و مناطق الصفحة الأساسية&colon;</p>
         <style>
@@ -191,7 +190,7 @@
         <br>
 
 
-    </x-article>
+    </article>
 <x-slot name="sidebar">
     @livewire('sidebar.html')
 </x-slot>
