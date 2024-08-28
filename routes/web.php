@@ -3,6 +3,17 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
+
+Route::get('/', function () {
+    return view('home');
+})->name('home');
+
+
+Route::get('/about', function () {
+    return view('site.about');
+})->name('about');
+
+
 require __DIR__ . '/route.php';
 
 Route::get('/dashboard', function () {

@@ -4,18 +4,19 @@
      'home' => false,
  ])
  <div class="flex items-center justify-between flex-nowrap font-medium text-base py-4  px-5">
-     <a class="shift group" href="{{$prev}}" wire:navigate>
-         <x-icons.backward class="h-3.5 transition group-hover:translate-x-1" />
+     <a class="shift group" href="{{ $prev }}" wire:navigate>
+         <span class=" font-arial text-xl text-white transition duration-500 group-hover:translate-x-1"> &#171; </span>
 
          @if ($home)
-             <span class=""> الرئيسية </span>
+             <span class=""> الصفحة الرئيسية </span>
          @else
              <span class="">الدرس السابق</span>
          @endif
      </a>
 
-     <a class="shift group" href="{{$next}}" wire:navigate>
+     <a class="shift group" href="{{ $next }}" wire:navigate>
          <span class="">الدرس التالي</span>
-         <x-icons.forward class="h-3.5  transition ease-in-out duration-200 group-hover:-translate-x-1" />
+         <span class="font-arial text-xl text-white transition duration-500 group-hover:-translate-x-1"> &#187; </span>
+
      </a>
  </div>

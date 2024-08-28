@@ -1,7 +1,7 @@
 <x-app-layout title="تعلم لغة HTML">
     <x-shift :home="true" :next="route('html.editors')" />
     <h1>
-       <code name="term-lesson">HTML </code>
+       <code class="term-lesson">HTML </code>
         نظرة عامة عن لغة
         {{-- <x-tag.h-term>HTML</x-tag.h-term> --}}
        <code class="font-sans font-normal text-gray-400">HTML</code>
@@ -28,7 +28,7 @@
             ,تستخدم لتنظيم وعرض المحتوى على شبكة الإنترنت.
         </p>
     </article>
-
+    <x-code.exam />
 
 <x-slot name="sidebar">
     @livewire('sidebar.html')

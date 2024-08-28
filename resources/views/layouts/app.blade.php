@@ -38,8 +38,8 @@
     @livewireStyles
 </head>
 
-<body class="font-ar antialiased dark:text-dark-text-main dark:bg-dark-body bg-gray-200/80 " x-data="{ sidebar: window.innerWidth >= 1000 }"
-    x-init="window.addEventListener('resize', () => {
+<body class="font-ar text-base font-medium antialiased dark:text-dark-text-main dark:bg-dark-body bg-gray-200/80 "
+    x-data="{ sidebar: window.innerWidth >= 1000 }" x-init="window.addEventListener('resize', () => {
         sidebar = window.innerWidth >= 1000;
     });">
     <x-header-layout :menu="$menu" />
@@ -61,6 +61,8 @@
                 {{ $slot }}
 
             </main>
+            <x-footer-layout />
+
         </div>
 
 

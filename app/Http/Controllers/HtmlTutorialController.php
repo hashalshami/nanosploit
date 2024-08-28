@@ -9,11 +9,11 @@ class HtmlTutorialController extends Controller
     
     public function index(){
         
-        return view('tutorials.html.intro.overview');
+        return view('tutorials.html.overview');
     }
     public function editors()
     {
-        return view('tutorials.html.intro.editors');
+        return view('tutorials.html.editors');
     }
     public function element()
     {

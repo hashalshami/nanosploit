@@ -124,9 +124,7 @@
         <h2>الشكل العام لهيكل الصفحة</h2>
         <p>الشكل التالي هو تصور توضيحي للهيكل و مناطق الصفحة الأساسية&colon;</p>
         <style>
-            .structure {
-                background-color: #24455f87 !important;
-            }
+         
 
             .structure,
             .structure div {
@@ -162,7 +160,7 @@
             }
         </style>
         <div class="section">
-            <div class="structure" dir="ltr">
+            <div class="structure bg-slate-700 bg-opacity-50 " dir="ltr">
                 <code class="fontcode">&lt;<code class="en">html</code>&gt;</code>
                 <div class="rootpage">
                     <span dir="rtl">المنطقة الكاملة لمستند <code class="en">HTML</code> </span>

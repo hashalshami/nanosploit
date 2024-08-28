@@ -34,6 +34,7 @@ module.exports = {
                 ar: ['Tajawal', ...defaultTheme.fontFamily.sans],
                 en: ['Rubik', ...defaultTheme.fontFamily.sans],
                 display: ['"Readex Pro"', 'sans-serif'],
+                arial: ['Arial', 'Helvetica', 'sans-serif'],
                 // en: ['Roboto', ...defaultTheme.fontFamily.sans],
             },
         },
