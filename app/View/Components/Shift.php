@@ -21,6 +21,6 @@ class Shift extends Component
      */
     public function render(): View
     {
-        return view('components.layout.shift');
+        return view('components.main.shift');
     }
 }

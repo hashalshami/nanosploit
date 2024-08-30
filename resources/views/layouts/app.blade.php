@@ -42,11 +42,11 @@
     x-data="{ sidebar: window.innerWidth >= 1000 }" x-init="window.addEventListener('resize', () => {
         sidebar = window.innerWidth >= 1000;
     });">
-    <x-header-layout :menu="$menu" />
+    <x-header :menu="$menu" />
     @isset($sidebar)
-        <x-sidebar-layout>
+        <x-sidebar>
             {{ $sidebar }}
-        </x-sidebar-layout>
+        </x-sidebar>
     @endisset
     <div class="min-h-screen w-full ">
 
@@ -61,7 +61,7 @@
                 {{ $slot }}
 
             </main>
-            <x-footer-layout />
+            <x-footer />
 
         </div>
 

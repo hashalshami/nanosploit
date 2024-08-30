@@ -33,7 +33,9 @@
     .term {
         @apply text-white font-en;
     }
-
+    .pre{
+        @apply block pl-8 whitespace-pre text-base relative hover:bg-[#111b23];
+    }
     .term-lesson {
         @apply block font-sans uppercase text-tag-termh mb-3;
     }

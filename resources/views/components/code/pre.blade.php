@@ -1,0 +1,1 @@
+<pre  {{$attributes}}>{{$slot}}</pre>

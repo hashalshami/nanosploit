@@ -19,8 +19,8 @@
             </button>
         </div>
         {{-- code-exam --}}
-        <div class="scroll-smooth overflow-x-auto leading-normal bg-black text-[#eeeeee] rounded-b py-3" style="counter-reset: line;" dir="ltr">
-            <pre><code>&lt;<span class="tag">ul</span>&gt;</code> </pre>
+        <div class="code-exam list-decimal scroll-smooth overflow-x-auto leading-normal bg-black text-[#eeeeee] rounded-b py-3" style="counter-reset: line;" dir="ltr">
+            <pre ><code>&lt;<span class="tag">ul</span>&gt;</code> </pre>
             <pre class="comment ">  &lt;!--  العنصر الأول للقائمة الرئيسية --&gt;</pre>
             <pre>  <code>&lt;<span class="tag">li</span>&gt;</code> Front-End </pre>
             <pre>      <code>&lt;<span class="tag">ul</span>&gt;</code> </pre>
